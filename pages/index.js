@@ -27,7 +27,7 @@ export default function Home({ allPostsData }) {
             <img
               src="https://i89.servimg.com/u/f89/09/02/66/41/me-vec10.png"
               alt="main picture"
-              class="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full"
+              className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full"
               loading="lazy"
             />
           </div>
@@ -40,14 +40,14 @@ export default function Home({ allPostsData }) {
             <ul className="w-full">
               {allPostsData.map(({ id, date, title }) => (
                 <li
-                  className="border border-black bg-white p-8 mt-8 hover:shadow-lg"
+                  className="border border-black bg-slate-50 p-8 mt-8 hover:shadow-lg"
                   key={id}
                 >
                   <Link href={`/posts/${id}`}>
-                    <a>{title}</a>
+                    <a className="text-slate-700 w-full">{title}</a>
                   </Link>
                   <br />
-                  <small className="">
+                  <small className="w-full">
                     <Date dateString={date} />
                   </small>
                 </li>

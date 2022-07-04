@@ -28,10 +28,10 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>Article O'food</title>
+        <title>{postData.title}</title>
       </Head>
-      <div className="w-full">
-        <div className="flex justify-center">
+      <div className="">
+        <div className="">
           <img
             className="inline-block object-cover w-24 h-24 rounded-full"
             src="https://i89.servimg.com/u/f89/09/02/66/41/avmys10.jpg"
@@ -48,28 +48,28 @@ export default function Post({ postData }) {
           l’experience utilisateur.
         </p>
       </div>
-      <div className="grid-cols-2 mt-6">
-        <div className="flex flex-wrap justify-center">
-          <img
-            src={postData.img}
-            className="p-1 bg-white border rounded max-w-sm"
-            alt="..."
-          />
+      <div className="">
+        <div className="mt-6 hero container max-w-screen-lg mx-auto pb-10">
+          <img src={postData.img} className="mx-auto" alt="picture cover" />
         </div>
-        <div>
-          <h2 className="mt-6 text-center">{postData.title}</h2>
+        <div className="w-full mt-6 hero container max-w-screen-lg mx-auto pb-10">
+          <h2 className="w-full font-roboto text-center font-light mt-2">
+            {postData.title}
+          </h2>
           <div
-            className="text-justify mt-6 p-8 list-disc"
+            className="mt-8"
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           />
-          <div className="underline decoration-sky-500 text-stone-300">
+          <div className="mt-6">
             <Date dateString={postData.date} />
           </div>
         </div>
       </div>
-      <div className="flex justify-end mt-6">
+      <div className="w-full flex justify-end px-8 mb-8">
         <Link href="/">
-          <a className="text-lime-600">Back to home</a>
+          <div className="flex">
+            <a className="">Back to home</a>
+          </div>
         </Link>
       </div>
     </Layout>
