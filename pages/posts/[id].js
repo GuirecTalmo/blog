@@ -40,9 +40,8 @@ export default function Post({ postData }) {
         </div>
       </div>
       <h1 className="w-full font-roboto text-center font-light mt-2">Guirec</h1>
-      <h2 className="w-full font-roboto text-base text-center"></h2>
-      <div className="flex justify-center mt-6">
-        <p className="w-96 text-justify italic">
+      <div className="flex justify-center mt-6 px-8">
+        <p className="w-96 text-justify italic px-8">
           Développeur basé à Paris, j’aime les défis, explorer de nouvelles
           solutions et développer des projets qui mettent la priorité sur
           l’experience utilisateur.
