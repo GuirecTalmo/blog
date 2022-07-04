@@ -31,7 +31,7 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <div className="">
-        <div className="">
+        <div className="mt-8">
           <img
             className="inline-block object-cover w-24 h-24 rounded-full"
             src="https://i89.servimg.com/u/f89/09/02/66/41/avmys10.jpg"
@@ -60,7 +60,7 @@ export default function Post({ postData }) {
             className="mt-8"
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           />
-          <div className="mt-6">
+          <div className="mt-6 font-light">
             <Date dateString={postData.date} />
           </div>
         </div>
@@ -68,7 +68,9 @@ export default function Post({ postData }) {
       <div className="w-full flex justify-end px-8 mb-8">
         <Link href="/">
           <div className="flex">
-            <a className="">Back to home</a>
+            <a className="text-slate-800 cursor-pointer hover:text-slate-400">
+              Back to home
+            </a>
           </div>
         </Link>
       </div>
